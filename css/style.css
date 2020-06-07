@@ -472,6 +472,19 @@ p {
 
 @media (max-width: 319px) {
 
+	.header::before,
+	.header::after,
+	.card::after,
+	.footer::before,
+	.footer::after{
+		width: 320px;
+	}
+
+	.card::after {
+		left: -20px;
+	}
+
+
 	.header_title_top,
 	.header_title_bottom {
 		font-size: 28px;
