@@ -17,9 +17,22 @@ body {
 	font-family: OpenSans, Arial, sans-serif;
 }
 
+p {
+	margin: 0;
+}
+
 .header {
 	position: relative;
-	
+	min-height: 100vh;
+	width: 100vw;	
+}
+
+.header_contain {
+	width: 100%;
+	max-width: 1920px;
+	min-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .header::before {
@@ -52,68 +65,70 @@ body {
 
 .logo_text {
 	fill: #ffffff;
-	width: 133px;
+	width: 42%;
 	display: block;
-	padding-top: 33px;
+	padding-top: 10.3%;
 	margin-left: auto;
 	margin-right: auto;
-	margin-bottom: 126px;
+	margin-bottom: 40%;
+}
+
+.header_title {
+	width: 87.5%;
+	margin: 0px auto 23.125%;
 }
 
 .header_title_top,
 .header_title_bottom {
-	margin: 0;
 	text-transform: uppercase;
-	font-size: 28px;
+	font-size: 8.75vw;
 	color: #ffffff;
 }
 
 .header_title_top {
-	margin-left: 20px;
-	margin-bottom: 15px;
+	margin-bottom: 5.36%;
 }
 
 .header_title_bottom {
-	margin-left: 64px;
-	margin-bottom: 74px;
+	margin-left: 15.7%;
 }
 
 .download_buttons_container {
-	padding-bottom: 84px;
+	padding-bottom: 25%;
 }
 
 .download_button {
 	position: relative;
-	width: 280px;
+	width: 87.5%;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .download_button:nth-child(n+2) {
-	margin-top: 14px;
+	margin-top: 5%;
 }
 
 .button_link {
 	display: block;
 	width: 100%;
-	height: 36px;
+	height: 4.5em;
 	background-color: #5e3db3;
 	box-sizing: border-box;
-	padding-left: 112px;
-	padding-top: 6px;
-	border-radius: 50px;
+	padding-left: 14em;
+	padding-top: 0.75em;
+	border-radius: 6.25em;
 	text-transform: uppercase;
 	text-decoration: none;
-	font-size: 8px;
+	font-size: 2.5vw;
 	color: #ffffff;
 }
 
 .button_logo {
 	fill: #ffffff;
-	width: 25px;
+	width: 3.25em;
 	position: absolute;
-	left: 82px;
-	top: 4px;
+	left: 10em;
+	top: 0.5em;
 }
 
 .app_store,
@@ -126,60 +141,82 @@ body {
 /*---------- Main ----------*/
 
 
-.specialization_cards {
-	/*padding-top: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	box-sizing: border-box;*/
-	width: 280px;
+.main {
+	width: 100vw;	
+}
+
+.specialization {
+	width: 100%;
+	max-width: 1920px;
+	min-width: 320px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.specialization_cards_container {
 	position: relative;
+	padding-top: 4%;
+}
+
+.specialization_cards {
+	width: 87.5%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .specialization_cards::after {
-	content: url("../images/footballer_192.png");
+	content: "";
+	background-image: url("../images/footballer_192.png");
+	background-repeat: no-repeat;
+	background-size: 60% auto;
+	background-position: left 55% top 12%;
 	position: absolute;
-	top: 70px;
-	left: 45px;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
 
 }
 
 .players.specialization_cards::after {
-	content: url("../images/basketballer_302.png");
-	left: -10px;
+	background-image: url("../images/basketballer_302.png");
+	background-size: 94.375% auto;
+	background-position: left 30% top 13%;
 
 }
 
 
 .specialization_title {
 	margin-top: 0;
-	margin-bottom: 230px;
+	margin-bottom: 82%;
 	color: #e7e7e7;
 	font-weight: bold;
-	font-size: 50px;
+	font-size: 15.625vw;
 	text-transform: uppercase;
 
 }
 
 .card {
-	padding-top: 75px;
-	padding-bottom: 43px;
+	padding-top: 26.8%;
+	padding-bottom: 15.4%;
 	position: relative;
 }
 
-.card:nth-child(n+3) {
-	padding-top: 52px;
+.first_card {
+	padding-top: 26.4%;
+}
 
+.card:nth-child(n+3) {
+	padding-top: 18.57%;
 }
 
 .card::after {
 	content: "";
 	position: absolute;
-	min-width: 200vw;
+	width: 100vw;
 	top: 0;
 	bottom: 0;
-	left: -100vw;
+	left: calc(0px - ((100vw - 100%)/2));
 	right: 0;
 	z-index: -1;
 }
@@ -202,15 +239,14 @@ body {
 
 .card_title_wrapper {
 	display: flex;
-	/*position: relative;*/
-	margin-bottom: 15px;
+	margin-bottom: 5.36%;
 }
 
 .card_number {
-	font-size: 14px;
+	font-size: 4.375vw;
 	font-weight: bold;
 	box-sizing: border-box;
-	padding-top: 4px;
+	padding-top: 0.3em;
 	position: relative;
 }
 
@@ -224,32 +260,32 @@ body {
 
 .card_number::after {
 	content: "";
-	border-top: 3px solid #5e3db3;
+	border-top: 0.2em solid #5e3db3;
 	position: absolute;
-	width: 14px;
-	top: 23px;
-	bottom: 10px;
-	right: 10px;
-	left: 1px;
+	width: 1em;
+	top: 1.7em;
+	bottom: 0;
+	right: 0;
+	left: 0.07em;
 }
 
 .third_card .card_number::after {
-	border-top: 3px solid #ffffff;
+	border-top: 0.2em solid #ffffff;
 }
 
 .card_title {
 	color: #c1c1c1;
-	font-size: 23px;
+	font-size: 7.2vw;
 	font-weight: bold;
 	text-transform: uppercase;
 	margin-top: 0;
 	margin-bottom: 0;
-	margin-left: 9px;
+	margin-left: 0.4em;
 	;
 }
 
 .card_content {
-	font-size: 16px;
+	font-size: 5vw;
 }
 
 .third_card .card_content {
@@ -258,27 +294,34 @@ body {
 
 
 
+.abilities {
+	width: 100%;
+	max-width: 1920px;
+	min-width: 320px;
+	margin-left: auto;
+	margin-right: auto;
+}
 
-
-
-
-
+.ability_picture {
+	display: block;
+}
 
 .ability_card_image {
+	display: block;
 	width: 100%;
 }
 
 .ability_card_content {
-	width: 280px;
+	width: 87.5%;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: 24px;
-	padding-bottom: 70px;
+	padding-top: 7.5%;
+	padding-bottom: 22%;
 	position: relative;
 }
 
 .ability_card_content:last-child {
-	padding-bottom: 60px;
+	padding-bottom: 18.75%;
 
 }
 
@@ -287,11 +330,11 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	width: 70px;
-	height: 70px;
+	width: 25%;
+	height: 34.15%;
 	background-color: #5e3db3;
 	position: absolute;
-	top: -64px;
+	top: -27%;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -302,21 +345,21 @@ body {
 }
 
 .rectangle>.card_number::after {
-	border-top: 3px solid #ffffff;
+	border-top: 0.2em solid #ffffff;
 	opacity: 0.3;
 }
 
 .ability_card_title {
 	margin-top: 0;
-	margin-bottom: 14px;
-	font-size: 28px;
+	margin-bottom: 5%;
+	font-size: 8.75vw;
 	font-weight: bold;
 	color: #e7e7e7;
 	text-transform: uppercase;
 }
 
 .ability_card_text {
-	font-size: 17px;
+	font-size: 5.3vw;
 }
 
 
@@ -325,6 +368,16 @@ body {
 
 .footer {
 	position: relative;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+.footer_contain {
+	width: 100%;
+	max-width: 1920px;
+	min-width: 320px;
+	margin-right: auto;
+	margin-left: auto;
 }
 
 .footer::before {
@@ -357,13 +410,13 @@ body {
 
 
 .button_title_container {
-	padding-top: 100px;
-	padding-bottom: 70px;
+	padding-top: 32%;
+	padding-bottom: 22%;
 }
 
 
 .footer_logo_button {
-	width: 72px;
+	width: 22.5%;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -372,55 +425,765 @@ body {
 .footer_logo_link {
 	display: block;
 	width: 100%;
-	height: 74px;
-	box-sizing: border-box;
-	padding: 10px 5px;
-	border-radius: 16px;
+	padding: 51.4% 0%;
+	border-radius: 25%;
 	background-color: #5e3db3;
 
 }
 
 .surface_logo {
 	fill: #ffffff;
-	width: 56px;
+	width: 77.78%;
 	position: absolute;
-	top: 12px;
-	left: 7px;
+	top: 16%;
+	left: 11%;
 }
 
 .footer_title {
 	margin: 0;
-	padding-top: 48px;
-	width: 280px;
+	padding-top: 15%;
+	width: 87.5%;
 	margin-left: auto;
 	margin-right: auto;
 	text-transform: uppercase;
 	color: #ffffff;
-	font-size: 33px;
+	font-size: 10.3vw;
 	font-weight: bold;
 	text-align: center;
 	line-height: 0.7em;
 }
 
 .footer_title_add {
-	font-size: 15px;
+	font-size: 4.7vw;
 	font-weight: normal;
 	color: #9b8dc3;
 }
 
 .footer .logo_text {
 	padding-top: 0;
-	padding-bottom: 8px;
+	padding-bottom: 4%;
 	margin-bottom: 0;
 }
 
 
 
+/*---------- Media --------------*/
+
+
+@media (max-width: 319px) {
+
+	.header_title_top,
+	.header_title_bottom {
+		font-size: 28px;
+	}
+
+	.button_link {
+		font-size: 8px;
+	}
+
+	.specialization_title {
+		font-size: 50px;
+	}
+
+	.card_number {
+		font-size: 14px;
+	}
+
+	.card_title {
+		font-size: 23px;
+	}
+
+	.card_content {
+		font-size: 16px;
+	}
+
+	.rectangle {
+		font-size: 14px;
+	}
+
+	.ability_card_title {
+		font-size: 28px;
+	}
+
+	.ability_card_text {
+		font-size: 17px;
+	}
+
+	.footer_title {
+		font-size: 33px;
+	}
+
+	.footer_title_add {
+		font-size: 15px;
+	}
+
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+	
+	.header::before {
+		background-image: url("../images/football_1280.jpg");
+	}
+
+	.logo_text {
+		width: 27vw;
+		padding-top: 4.9vw;
+		margin-bottom: 20.57vw;
+	}
+
+	.header_title {
+		width: 76.56vw;
+		margin: 0px auto 37.24vw;
+	}
+
+	.header_title_top,
+	.header_title_bottom {
+		font-size: 8.333vw;
+	}
+
+	.header_title_top {
+		margin-bottom: 0;
+	}
+
+	.header_title_bottom {
+		margin-left: 12.8vw;
+	}
+
+	.download_buttons_container {
+		padding-bottom: 11.85vw;
+		display: flex;
+		width: 85.4vw;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.download_button {
+		width: 40.625vw;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.download_button:nth-child(n+2) {
+		margin-top: 0;
+		margin-left: 4.17vw;
+	}
+
+	.button_link {
+		height: 9.9vw;
+		padding-left: 15.9vw;
+		padding-top: 2.2vw;
+		border-radius: 5vw;
+		font-size: 1.82vw;
+	}
+
+	.button_logo {
+		width: 5.34vw;
+		left: 7.22vw;
+		top: 2.2vw;
+	}
 
 
 
 
+	.specialization_cards_container {
+		padding-top: 7vw;
+	}
 
+	.specialization_cards {
+		width: 58vw;
+		margin-left: 38vw;
+	}
+
+	.players {
+		margin-left: auto;
+		margin-right: 38vw;
+	}
+
+	.specialization_cards::after {
+		background-image: url("../images/footballer_497.png");
+		background-size: 64.7% auto;
+		background-position: left -60% top 155%;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+	}
+
+	.players.specialization_cards::after {
+		background-image: url("../images/basketballer_436.png");
+		background-size: 56.77% auto;
+		background-position: right top 25%;
+		left: 0;
+		top: 0;
+
+	}
+
+
+	.specialization_title {
+		margin-bottom: 4.5vw;
+		font-size: 10.42vw;
+
+	}
+
+	.card {
+		padding-bottom: 3.5vw;
+	}
+
+	.card:nth-child(n+3) {
+		padding-top: 3.5vw;
+	}
+
+	.first_card {
+		padding-top: 0;
+	}
+
+	.card::after {
+		left: -38vw;
+	}
+
+	.players .card::after {
+		left: -4vw;
+	}
+
+	.first_card.card::after {
+		background-color: #fafafa;
+		opacity: 0;
+	}
+
+	.second_card.card::after {
+		background-color: #f5f4f9;
+	}
+
+	.third_card.card::after {
+		background-color: #5e42b0;
+	}
+
+	.players .third_card.card::after {
+		background-color: #090c35;
+	}
+
+	.card_title_wrapper {
+		margin-bottom: 0;
+	}
+
+	.card_number {
+		font-size: 2.34vw;
+		padding-top: 0.7vw;
+	}
+
+	.third_card .card_number {
+		color: #0a0e34;
+	}
+
+	.players .third_card .card_number {
+		color: #8765dd;
+	}
+
+	.card_number::after {
+		border-top: 0.8vw solid #5e42b0;
+		width: 2.6vw;
+		top: 3.8vw;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	.third_card .card_number::after {
+		border-top: 1vw solid #efefef;
+	}
+
+	.card_title {
+		font-size: 4.17vw;
+		margin-left: 1.43vw;
+	}
+
+	.card_content {
+		margin-top: 2.3vw;
+		margin-bottom: 2.3vw;
+		font-size: 2.3vw;
+	}
+
+	.third_card .card_content {
+		color: #ffffff;
+	}
+
+
+
+
+	.ability_card_image {
+		width: 100%;
+	}
+
+	.ability_card_content {
+		width: 88.4vw;
+		margin-left: 4.17vw;
+		padding-top: 6.5vw;
+		padding-bottom: 13vw;
+	}
+
+	.ability_card_content:last-child {
+		padding-bottom: 13vw;
+
+	}
+
+
+	.rectangle {
+		width: 15.1vw;
+		height: 15.1vw;
+		background-color: #5e42b0;
+		top: -11vw;
+	}
+
+	.rectangle>.card_number {
+		color: #f5f6f7;
+		font-size: 3.125vw;
+		padding-top: 0;
+	}
+
+	.rectangle>.card_number::after {
+		border-top: 0.3em solid #ffffff;
+		opacity: 0.3;
+		width: 1.2em;
+		top: 1.5em;
+	}
+
+	.ability_card_title {
+		margin-bottom: 0;
+		font-size: 10.42vw;
+	}
+
+	.ability_card_text {
+		font-size: 3.26vw;
+		margin-top: 1.5vw;
+	}
+
+
+	/*---------------- Footer --------------*/
+
+
+	.footer::before {
+		background-image: url("../images/game_1280.jpg");
+	}
+
+	.button_title_container {
+		padding-top: 16.3vw;
+		padding-bottom: 35.2vw;
+	}
+
+
+	.footer_logo_button {
+		width: 17.84vw;
+	}
+
+	.footer_logo_link {
+		border-radius: 4vw;
+	}
+
+	.surface_logo {
+		width: 13.33vw;
+		top: 3vw;
+	}
+
+	.footer_title {
+		padding-top: 10.4vw;
+		width: 91.54vw;
+		font-size: 11vw;
+		line-height: 0.7em;
+	}
+
+	.footer_title_add {
+		font-size: 4.7vw;
+		color: #a496ca;
+	}
+
+	.footer .logo_text {
+		padding-bottom: 3vw;
+	}
+
+}
+
+
+@media (min-width: 961px) {
+	
+	.header::before {
+		background-image: url("../images/football_1920.jpg");
+	}
+
+	.logo_text {
+		width: 9.95%;
+		padding-top: 2.35%;
+		margin-bottom: 13.45%;
+	}
+
+	.header_title {
+		width: 80%;
+		margin: 0px auto 10%;
+	}
+
+	.header_title_top,
+	.header_title_bottom {
+		font-size: 4.7vw;
+	}
+
+	.header_title_top {
+		margin-bottom: 0;
+	}
+
+	.header_title_bottom {
+		margin-left: 28%;
+	}
+
+	.header .download_buttons_container {
+		padding-bottom: 5.73%;
+		display: flex;
+		width: 35%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.download_button {
+		width: 46.3%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.download_button:nth-child(n+2) {
+		margin-top: 0;
+		margin-left: 7.4%;
+	}
+
+	.button_link {
+		height: 5.5em;
+		padding-left: 7.46em;
+		padding-top: 1.3em;
+		border-radius: 3em;
+		font-size: 0.73vw;
+	}
+
+	.button_logo {
+		width: 2.86em;
+		left: 3em;
+		top: 1em;
+	}
+
+
+
+
+	.specialization_cards_container {
+		padding-top: 4.85%;
+	}
+
+	.specialization_cards {
+		width: 37.3%;
+		margin-left: 52.5%;
+	}
+
+	.players {
+		margin-left: auto;
+		margin-right: 52.5%;
+	}
+
+	.specialization_cards::after {
+		background-image: url("../images/footballer_566.png");
+		background-size: 29.5% auto;
+		background-position: left 26% center;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: -8%;
+
+	}
+
+	.players.specialization_cards::after {
+		background-image: url("../images/basketballer_991.png");
+		background-size: 51.6% auto;
+		background-position: right 18% top;
+		left: 0;
+		top: 1%;
+		right: 0;
+		bottom: 0;
+
+	}
+
+
+	.specialization_title {
+		margin-bottom: 9.5%;
+		font-size: 4.17vw;
+	}
+
+	.card {
+		padding-top: 7%;
+		padding-bottom: 7%;
+	}
+
+	.card:nth-child(n+3) {
+		padding-top: 7%;
+	}
+
+	.first_card {
+		padding-top: 0;
+	}
+
+	.card::after {
+		left: calc(0px - ((52.5/100)*100vw));
+	}
+
+	.players .card::after {
+		left: calc(0px - (100vw - 100% - ((52.5/100)*100vw)));
+	}
+
+	.first_card.card::after {
+		background-color: #fafafa;
+		opacity: 0;
+	}
+
+	.second_card.card::after {
+		background-color: #f5f4f9;
+	}
+
+	.third_card.card::after {
+		background-color: #5e42b0;
+	}
+
+	.players .third_card.card::after {
+		background-color: #090c35;
+	}
+
+	.card_title_wrapper {
+		margin-bottom: 0;
+	}
+
+	.card_number {
+		font-size: 0.94vw;
+		padding-top: 0.4em;
+	}
+
+	.third_card .card_number {
+		color: #0a0e34;
+	}
+
+	.players .third_card .card_number {
+		color: #8765dd;
+	}
+
+	.card_number::after {
+		border-top: 0.4em solid #5e42b0;
+		width: 1.1em;
+		top: 1.7em;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+
+	.third_card .card_number::after {
+		border-top: 0.4em solid #efefef;
+	}
+
+	.card_title {
+		font-size: 1.875vw;
+		margin-left: 0.3em;
+	}
+
+	.card_content {
+		font-size: 1.14vw;
+		margin-top: 1.3%;
+		margin-bottom: 1.3%;
+	}
+
+	.third_card .card_content {
+		color: #ffffff;
+	}
+
+
+
+
+	.ability_card {
+		display: flex;
+		position: relative;
+	}
+
+	.ability_card:nth-child(2n+2) {
+		flex-direction: row-reverse;
+	}
+
+	.ability_picture {
+		width: 50%;
+	}
+
+	.ability_card_image {
+		width: 100%
+	}
+
+	.ability_card_content {
+		box-sizing: border-box;
+		width: 50%;
+		margin: 0;
+		padding-top: 11.7%;
+		padding-bottom: 0;
+		padding-left: 7%;
+		padding-right: 9.48%;
+		position: initial;
+	}
+
+	.ability_card_content:last-child {
+		padding-bottom: 0;
+
+	}
+
+
+	.rectangle {
+		width: 7em;
+		height: 6.46em;
+		background-color: #5e42b0;
+		top: 8.5em;
+		left: calc(50% - 3.5em);
+		font-size: 1.25vw;
+	}
+
+	.rectangle>.card_number {
+		color: #f5f6f7;
+		font-size: inherit;
+		padding-top: 0;
+	}
+
+	.rectangle>.card_number::after {
+		border-top: 0.3em solid #ffffff;
+		opacity: 0.3;
+		width: 1.2em;
+		top: 1.5em;
+	}
+
+	.ability_card_title {
+		margin: 0;
+		margin-bottom: 11%;
+		font-size: 4.17vw;
+	}
+
+	.ability_card_text {
+		font-size: 1.35vw;
+		margin-top: 4%;
+		margin-bottom: 4%;
+	}
+
+
+	/*---------------- Footer --------------*/
+
+
+	.footer::before {
+		background-image: url("../images/game_1920.jpg");
+	}
+
+	.button_title_container {
+		padding-top: 11.87%;
+		padding-bottom: 8%;
+		display: flex;
+		width: 45%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+
+	.footer_logo_button {
+		width: 18.5%;
+		margin: 0;
+	}
+
+	.footer_logo_link {
+		border-radius: 20%;
+	}
+
+	.surface_logo {
+		width: 75%;
+		top: 17.5%;
+		left: 13%;
+	}
+
+	.footer_title {
+		padding-top: 2.5%;
+		width: 100%;
+		font-size: 4.17vw;
+		line-height: 0.6em;
+		margin: 0;
+		text-align: left;
+		margin-left: 4.4%;
+	}
+
+	.footer_title_add {
+		font-size: 1.56vw;
+		color: #a496ca;
+	}
+
+	.footer .download_buttons_container {
+		padding-bottom: 13.5%;
+		display: flex;
+		width: 35%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footer .logo_text {
+		padding-bottom: 2.6%;
+	}
+
+}
+
+@media (min-width: 1921px) {
+
+	.header {
+		min-height: initial;
+	}
+
+	.footer {
+		min-height: initial;
+	}
+
+	.header_title_top,
+	.header_title_bottom {
+		font-size: 90px;
+	}
+
+	.button_link {
+		font-size: 14px;
+	}
+
+	.specialization_title {
+		font-size: 80px;
+	}
+
+	.card_number {
+		font-size: 18px;
+	}
+
+	.card_title {
+		font-size: 36px;
+	}
+
+	.card_content {
+		font-size: 22px;
+	}
+
+	.rectangle {
+		font-size: 24px;
+	}
+
+	.ability_card_title {
+		font-size: 80px;
+	}
+
+	.ability_card_text {
+		font-size: 26px;
+	}
+
+	.footer_title {
+		font-size: 80px;
+	}
+
+	.footer_title_add {
+		font-size: 30px;
+	}
+
+}
 
 
 
